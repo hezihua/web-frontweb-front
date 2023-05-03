@@ -3,7 +3,7 @@ FROM node:14-alpine as builder
 WORKDIR /code
 
 # 单独分离 package.json，是为了安装依赖可最大限度利用缓存
-ADD package.json package-lock.json /code/
+ADD package.json /code/
 RUN npm install
 
 ADD . /code
