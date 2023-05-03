@@ -1,0 +1,8 @@
+version: "3"
+services:
+  deploy:
+    build:
+      context: .
+      dockerfile: deploy.Dockerfile
+    ports:
+      - 4000:80
