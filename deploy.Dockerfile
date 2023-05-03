@@ -4,7 +4,7 @@ WORKDIR /code
 
 # 单独分离 package.json，是为了安装依赖可最大限度利用缓存
 ADD package.json package-lock.json /code/
-RUN yarn
+RUN npm install
 
 ADD . /code
 RUN npm run build
